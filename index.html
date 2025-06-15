@@ -1,0 +1,1458 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>NPL 2025 1ST SEASON </title>  
+  <style>  
+    body {  
+      background: #0c0021;  
+      font-family: Arial, sans-serif;  
+      color: white;  
+      padding: 20px;  
+    }  .scoreboard {  
+  background: linear-gradient(to right, #280a3c, #44006b);  
+  padding: 20px;  
+  border-radius: 15px;  
+  border: 2px solid #ffc400;  
+  box-shadow: 0 0 25px #00e0ff;  
+  max-width: 7500px;  
+  margin: auto;  
+}  
+
+.header {  
+  
+    
+  align-items: center;  
+  background-color: #ffe600;  
+  border-radius: 10px;  
+  padding: 10px 12px;  
+  color: black;  
+}  
+
+.header .left {  
+  font-size: 14px;  
+}  
+
+.header .left div:first-child {  
+  font-weight: bold;  
+  font-size: 18px;  
+}  
+
+.header .right {  
+  text-align: right;  
+}  
+
+.header .right div:first-child {  
+  color: #6a00ff;  
+  font-weight: bold;  
+}  
+
+
+
+.result {  
+  background-color: #00d4ff;  
+  color: black;  
+  font-weight: bold;  
+  margin-top: 12px;  
+  padding: 10px;  
+  text-align: center;  
+  border-radius: 10px;  
+}  
+
+.summary {  
+  display: flex;  
+  justify-content: space-around;  
+  margin-top: 10px;  
+  font-size: 14px;  
+}  
+
+.players {  
+  margin-top: 10px;  
+  background-color: #2b0047;  
+  padding: 10px;  
+  border-radius: 10px;  
+  display: flex;  
+  justify-content: space-between;  
+  font-size: 13px;  
+}  
+
+    .table th, .table td, .live-score th, .live-score td {
+      border: 1px solid #ffc400;
+      padding: 8px;
+      text-align: center;
+    }
+
+
+
+    .speech-box {
+      background: #1e0033;
+      border-left: 5px solid #ffc400;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    
+        body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #000a1a, #001f3f);
+      font-family: 'Rajdhani', sans-serif;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      color: #00d8ff;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .sub-header {
+      text-align: center;
+      font-size: 18px;
+      color: #add8ff;
+      margin-bottom: 30px;
+    }
+
+    .groups {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 30px;
+    }
+
+    .group-box {
+      background: #002b5b;
+      padding: 15px 25px;
+      border-radius: 12px;
+      border: 2px solid #00cfff;
+      min-width: 200px;
+    }
+
+    .group-box h3 {
+      color: #00cfff;
+      margin-bottom: 10px;
+    }
+
+    .group-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .group-box ul li {
+      padding: 4px 0;
+      border-bottom: 1px dashed #007ea7;
+    }
+
+    .fixtures {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .fixture-day {
+      background: #001933;
+      margin-bottom: 15px;
+      border: 1px solid #007ea7;
+      border-radius: 12px;
+      padding: 15px 20px;
+      box-shadow: 0 0 10px #00224488;
+    }
+
+    .fixture-day h4 {
+      color: #00cfff;
+      font-size: 20px;
+      border-bottom: 1px solid #007ea7;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .match {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed #004466;
+    }
+
+    .match:last-child {
+      border-bottom: none;
+    }
+
+    .finals {
+      margin-top: 30px;
+      background: #003366;
+      border: 2px dashed #00cfff;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .finals h3 {
+      color: #00cfff;
+      margin-bottom: 5px;
+    }
+
+.balls {  
+  margin-top: 15px;  
+  display: flex;  
+  gap: 8px;  
+  justify-content: center;  
+  flex-wrap: wrap;  
+}  
+
+.ball {  
+  width: 30px;  
+  height: 30px;  
+  border-radius: 50%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  font-weight: bold;  
+}  
+
+.wkt { background: red; color: white; }  
+.four { background: gold; color: black; }  
+.six { background: limegreen; color: black; }  
+.dot { background: #eee; color: black; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wicket Fall Banner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wicket-banner {
+      background: linear-gradient(to right, #4b0082, #9400d3);
+      border-radius: 10px;
+      padding: 12px 18px;
+      width: 95%;
+      max-width: 600px;
+      box-shadow: 0 0 15px #ff00ff88;
+    }
+
+    .player-name {
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .player-name img {
+      width: 24px;
+      height: 16px;
+      margin-right: 8px;
+      border-radius: 2px;
+    }
+
+    .score-info {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .stat-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #eee;
+    }
+
+    .team-strip {
+      margin-top: 8px;
+      background: #222;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .highlight {
+      color: #ffd700;
+    }
+
+    .out-by {
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: #ddd;
+    }
+
+  </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VK Stats Card</title>
+  <style>
+    body {
+      background: 
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .stats-bar {
+      background: linear-gradient(to right, #1a1a1a, #333);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #00f0ff;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 400px;
+      margin: auto;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .stats-bar.visible {
+      opacity: 1;
+    }
+
+    .player-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .player-icon {
+      background: #00ffcc;
+      color: black;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 0 8px #00ffcc;
+    }
+
+    .name-role {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .career {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .highlight {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+
+    .flag {
+      text-align: right;
+      font-size: 24px;
+    }
+
+    .score-strip {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      background: #222;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RCB Retentions 2025</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Oswald', sans-serif;
+      background: linear-gradient(to bottom right, #000000, #8e0e00);
+      color: white;
+    }
+
+    .container {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ffcc00;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .subheading {
+      font-size: 18px;
+      color: #ffc107;
+      margin-bottom: 30px;
+    }
+
+    .p {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .p-name {
+      width: 240px;
+      height: 60px;
+      background: linear-gradient(to right, #ffd700, #ffb300);
+      color: #000000;
+      font-weight: bold;
+      font-size: 15px;
+      border-radius: 50px;
+      box-shadow: 0 0 10px rgba(255, 187, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      border: 2px solid #ffcc00;
+      transition: transform 0.2s;
+    }
+
+    .player-name:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 235, 59, 0.9);
+    }
+
+    .footer {
+      font-size: 13px;
+      margin-top: 50px;
+      color: #cccccc;
+      opacity: 0.8;
+    }
+    <!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPL T20 2025 – 1st Season Live Scores & Updates</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+    }
+    h1, h2, h3, h4 {
+      font-weight: 700;
+    }
+    .highlight {
+      background: linear-gradient(to right, #5b21b6, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Win Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .predictor-box {
+      width: 90%;
+      max-width: 380px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 15px;
+      color: white;
+      box-shadow: 0 0 20px #ff0080;
+    }
+
+    .predictor-title {
+      background: #ff0077;
+      color: white;
+      padding: 6px 12px;
+      font-weight: bold;
+      display: inline-block;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .team-bar {
+      margin: 10px 0;
+    }
+
+    .label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .bar {
+      width: 100%;
+      height: 20px;
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    .team1 {
+      background: #00bfff;
+      height: 100%;
+      text-align: right;
+      padding-right: 5px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .team2 {
+      background: #ff1a1a;
+      height: 100%;
+      text-align: left;
+      padding-left: 5px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .score-strip {
+      background: #222;
+      color: #fff;
+      padding: 8px;
+      border-radius: 10px;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+ 
+
+  </style>
+</head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ICC CWC 2023: Most Runs & Wickets</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #1e005a, #300070);
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 36px;
+      color: #fff;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    h2 {
+      font-family: 'Staatliches', cursive;
+      color: #FFD700;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .column {
+      width: 320px;
+    }
+
+    .card {
+      background: linear-gradient(to right, #ff007a, #ff3399);
+      border-radius: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      margin: 12px auto;
+      color: #fff;
+      font-weight: bold;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .initials {
+      background-color: #FFD700;
+      color: #2e004f;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 18px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .player-details {
+      text-align: left;
+      flex-grow: 1;
+      padding-left: 15px;
+    }
+
+    .player-name {
+      font-size: 17px;
+    }
+
+    .player-team {
+      font-size: 13px;
+      color: #fffdd0;
+    }
+
+    .stats {
+      text-align: right;
+    }
+
+    .stat {
+      font-size: 20px;
+    }
+
+    .sub-stat {
+      font-size: 12px;
+      color: #fffdd0;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+    }
+
+    .title-label {
+      text-align: center;
+      font-size: 20px;
+      background: #ffffff11;
+      padding: 6px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-family: 'Staatliches', cursive;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+    
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPL 2025 Teams</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0c1220;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .team-card {
+      border-radius: 16px;
+      text-align: center;
+      padding: 30px 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      position: relative;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .team-card:hover {
+      transform: scale(1.04);
+    }
+
+    .team-logo-text {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      font-family: Impact, Haettenschweiler, 'Arial Black', sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    /* Team Themes */
+    .csk { background: linear-gradient(to bottom, #ffde00, #0b0f29); }
+    .dc { background: linear-gradient(to bottom, #d30000, #0b0f29); }
+    .gt { background: linear-gradient(to bottom, #0093ff, #0b0f29); }
+    .kkr { background: linear-gradient(to bottom, #f2d300, #431d58); }
+    .lsg { background: linear-gradient(to bottom, #ffffff, #0077ff); color: #111; }
+    .mi { background: linear-gradient(to bottom, #0078d4, #001e3c); }
+    .pbks { background: linear-gradient(to bottom, #d50000, #3c0000); }
+    .rr { background: linear-gradient(to bottom, #e91e63, #0b0f29); }
+    .rcb { background: linear-gradient(to bottom, #2e0f0f, #000000); }
+    .srh { background: linear-gradient(to bottom, #ff5c00, #8b0000); }
+      body {
+      margin: 0;
+      background: #0a0a23;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 20px;
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      padding: 12px 24px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #cccccc;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 95%;
+      max-width: 900px;
+      border-collapse: collapse;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+      background: #1c1c3c;
+      color: #ccccff;
+      font-size: 13px;
+      text-transform: uppercase;
+      padding: 10px;
+    }
+
+    td {
+      background: rgba(255, 255, 255, 0.05);
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .team {
+      text-align: left;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .team img {
+      width: 20px;
+      height: 15px;
+    }
+
+    .qualified {
+      color: #00e6e6;
+      font-weight: bold;
+    }
+
+    .highlight-row {
+      background: rgba(255, 0, 77, 0.15);
+    }
+
+    .nrr {
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    .footer {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007acc;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background:
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+
+    .card {
+      background: 
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+    }
+
+    .red { background: #e53935; }
+    .blue { background: #1e88e5; }
+    .orange { background: #fb8c00; }
+    .purple { background: #8e24aa; }
+    .pink { background: #d81b60; }
+    .dark { background: #424242; }
+    .gold { background: #fbc02d; color: #000; }
+    .green { background: #43a047; }
+
+    .card span {
+      display: block;
+      font-size: 16px;
+      margin-top: 6px;
+      font-weight: normal;
+    }
+
+    .section-title {
+      grid-column: span 2;
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #ffd700;
+    }
+
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+
+      .card {
+        font-size: 14px;
+        padding: 15px;
+      }
+
+      .card span {
+        font-size: 18px;
+      }
+    }
+    body {
+      background:
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .scorecard-warmup {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      font-weight: bold;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .score-top {
+      display: flex;
+      align-items: center;
+      background: #3e0075;
+      color: white;
+      font-size: 16px;
+    }
+
+    .teams {
+      background: #6800b3;
+      padding: 10px 12px;
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    }
+
+    .score {
+      background: #f10487;
+      color: white;
+      font-size: 18px;
+      padding: 10px 18px;
+      border-radius: 50px;
+      margin: 0 10px;
+    }
+
+    .overs {
+      background: #fdd835;
+      color: black;
+      padding: 10px 12px;
+      font-size: 14px;
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .overs-text {
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+
+    .match-info {
+      background: #29004d;
+      color: white;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  </style>
+  </style>  
+</head>  
+<body> 
+<body class="min-h-screen text-gray-800">
+  <header class="bg-white border-b border-purple-300 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-4xl highlight">NPL T20 2025</h1>
+   
+    </div>
+  </header>  <section class="text-center py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
+    <h2 class="text-5xl md:text-6xl font-bold mb-4">01-st Season of NPL T20 2025</h2> </section>
+    
+      <div class="stats-bar" id="vkStatsCard">
+    <div class="player-section">
+      <div class="player-icon">PS</div>
+      <div>
+        <div class="name-role">Pragadeesh<span style="font-weight:normal;">T20 CAREER</span></div>
+        <div class="career">239 Innings</div>
+      </div>
+    </div>
+ <div class="score-strip">NEW BATSMAN</div>
+
+    <div class="stats-grid">
+        
+      <div>RUNS<br><span class="highlight" id="runs">--</span></div>
+      <div>AVG<br><span class="highlight" id="avg">--</span></div>
+      <div>S/R<br><span class="highlight" id="sr">--</span></div>
+      <div>50s<br><span class="highlight" id="fifties">--</span></div>
+      <div>100s<br><span class="highlight" id="hundreds">--</span></div>
+      <div>BEST<br><span class="highlight" id="best">--</span></div>
+    </div>
+  </div>
+  <script>
+    const player = {
+      name: "Virat Kohli",
+      runs: 8857, // ← Update score here
+      innings: 236,
+      avg: 58.01,
+      sr: 93.40,
+      fifties: 98,
+      hundreds: 48,
+      best: 153
+    };
+
+    function showStatsIfMilestone() {
+      if (player.runs >= 50) {
+        document.getElementById("vkStatsCard").classList.add("visibl");
+        document.getElementById("runs").textContent = player.runs;
+        document.getElementById("avg").textContent = player.avg;
+        document.getElementById("sr").textContent = player.sr;
+        document.getElementById("fifties").textContent = player.fifties;
+        document.getElementById("hundreds").textContent = player.hundreds;
+        document.getElementById("best").textContent = player.best;
+      }
+    }
+
+    window.onload = showStatsIfMilestone;
+  </script>
+<div class="scoreboard">  
+  <!-- Header -->  
+  <div class="header">  
+    <div class="left">  
+      <div>🏏 NPL T20 MATCH NO1 </div>  
+      <div>RPS VS TKR</div>  
+    </div>  
+
+          <div class="scorecard-warmup">
+    <div class="score-top">
+      <div class="teams">RPS v TKR</div>
+      <div class="score">0-0</div>
+      <div class="overs">0</div>
+      <div class="overs-text">Overs</div>
+    </div>
+    </div>  
+  </div>    <!-- Result -->    <div class="result">  
+    RPS VS TKR
+  </div>    <!-- Match Summary -->    <div class="summary">  
+    <div><b>Target:</b> </div>  
+    <div><b>Overs:</b> </div>  
+    <div><b>CRR:</b> <span id="crr"></span></div>  
+    <div><b>RRR:</b> <span id="rrr"></span></div>  
+  </div>    <!-- Player Details -->    <div class="players">  
+    <div><b>TBD</b> 00 (0)</div>  
+    <div><b>TBD</b> 0 (0)</div>  
+    <div><b>TBD</b> 0-0 ( 0.0 )</div> 
+    
+  </div>    <!-- Recent Balls -->    <div class="balls">  
+    <div class="ball dot"></div>  
+    <div class="ball dot"></div>  
+    <div class="ball dot"></div>  
+    <div class="ball dot"></div>  
+    <div class="ball dot"></div>  
+    <div class="ball dot"></div>  
+    <div class="ball dot"></div>  
+    </div>
+    </div>
+  <div class="wicket-banner">
+    <div class="player-name">
+      <img src="https://flagcdn.com/w40/in.png" alt="India Flag">
+      TBD<span style="color:#ff4081;">&nbsp;00</span> (0)
+    </div>
+    <div class="out-by">c TBD b TBD</div>
+    <div class="stat-line">
+      <span><span class="highlight">Fours:</span> 0</span>
+      <span><span class="highlight">Sixes:</span> 0</span>
+      <span><span class="highlight">Dots:</span> 00</span>
+      <span><span class="highlight">SR:</span> 0</span>
+    </div>
+    <div class="team-strip">
+      TBD v TBD • <strong>0-0</strong> • 0.0 OVERS
+    </div>
+  </div>
+  <!-- Toss & Post-Match Speech -->
+<div class="section">
+  <h2>🎙 Toss Speech</h2>
+  <div class="speech-box"></div>
+
+  <h2>🎤 Post Match Speech</h2>
+  <div class="speech-box"></div>
+</div>
+
+<!-- Player of the Match -->
+<div class="section">
+  <h2>🏅 Player of the Match</h2>
+  <div class="speech-box">
+  </div>
+  </div>
+  </div>  
+</div> 
+<div class="title">NPL MEN’S T20 CUP CHENNAI 2025</div>
+  <div class="subtitle">After Match 0 of 15</div>
+               <H1>Group A</H1>
+  <table>
+    <tr>
+      <th>TEAM</th>
+      <th>PLD</th>
+      <th>W</th>
+      <th>L</th>
+      <th>NR</th>
+      <th>PTS</th>
+      <th>NRR</th>
+    </tr>
+    <tr>
+      <td class="team"> Quetta Gladiators <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+    <tr>
+      <td class="team">Rising Peeks  <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+    <tr>
+      <td class="team">Tribago Knight Riders <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+    <tr>
+      <td class="team">Zalaima Kings <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+      </table>
+               <H1>Group B</H1>
+      <table>
+    <tr>
+      <th>TEAM</th>
+      <th>PLD</th>
+      <th>W</th>
+      <th>L</th>
+      <th>NR</th>
+      <th>PTS</th>
+      <th>NRR</th>
+    </tr>
+    <tr>
+    <tr>
+      <td class="team">Chennai Elevns <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+    <tr>
+      <td class="team"> Jamaica tallahas <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+    <tr class="highlight-ro">
+      <td class="team">Rocking Sixes <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+    <tr class="highlight-ro">
+      <td class="team"> Treant Rockeres <span class="qualified"></span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="nrr">0.00</td>
+    </tr>
+  </table>
+
+  <div class="footer">Top 2 Teams Qualify for the Semi-Finals
+ 
+
+
+  <h1>MCC NPL 2025 LEADERBOARD</h1>
+  
+
+  <div class="container">
+    <!-- Most Runs -->
+    <div class="column">
+      <div class="title-label">Most Runs</div>
+
+      <div class="card">
+        <div class="initials">0</div>
+        <div class="player-details">
+          <div class="player-name">TBD</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">1</div>
+        <div class="player-details">
+          <div class="player-name">TBD</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">2</div>
+        <div class="player-details">
+          <div class="player-name">TBS</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">3</div>
+        <div class="player-details">
+          <div class="player-name">TBD</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">4</div>
+        <div class="player-details">
+          <div class="player-name">TBD</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">0</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Most Wickets -->
+    <div class="column">
+      <div class="title-label">Most Wickets</div>
+
+      <div class="card">
+        <div class="initials">0</div>
+        <div class="player-details">
+          <div class="player-name">TBD</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">1</div>
+        <div class="player-details">
+          <div class="player-name">TBD</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">2</div>
+        <div class="player-details">
+          <div class="player-name">YBD</div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">3</div>
+        <div class="player-details">
+          <div class="player-name"> TBD </div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="initials">4</div>
+        <div class="player-details">
+          <div class="player-name">TBD </div>
+          <div class="player-team"></div>
+        </div>
+        <div class="stats">
+          <div class="stat">00</div>
+          <div class="sub-stat">0 INNINGS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>As of 16TH JUNE 2025 · Crafted in MCC x NPL</footer>
+</div>
+</body>
+</html>
+<h1>NPL 2025 Statistics!</h1>
+
+  <div class="grid">
+
+    <div class="section-title">Top 3 Teams In Each Group By 4 </div>
+    <div class="card red">1️⃣ </div>
+    <div class="card orange">2️⃣ </div>
+    <div class="card dark">3️⃣ </div>
+    <div class="card blue">4️⃣ </div>
+
+    <div class="section-title">Caps & Totals</div>
+    <div class="card purple">🟣 Purple Cap<span></span></div>
+    <div class="card orange">🟠 Orange Cap<span></span></div>
+    <div class="card red">🔥 Highest Total<span></span></div>
+    <div class="card dark">❄️ Lowest Total<span></span></div>
+
+    <div class="section-title">Batting Records</div>
+    <div class="card green">🤝 Partnership<span></span></div>
+    <div class="card orange">💯 Highest Score<span></span></div>
+    <div class="card orange">4️⃣ Most 4s<span></span></div>
+    <div class="card pink">5️⃣ Most 50s<span></span></div>
+    <div class="card pink">💯 Most 100s<span></span></div>
+    <div class="card orange">6️⃣ Most 6s<span></span></div>
+    <div class="card dark">📏 Longest Six<span></span></div>
+
+
+    <div class="section-title">Bowling Records</div>
+    <div class="card purple">🎯 Best Bowling<span></span></div>
+    <div class="card purple">⭕ Dot Balls<span>144</span></div>
+    <div class="card purple">📉 Economy<span></span></div>
+        <div class="card dark">⚡ Fastest Ball<span></span></div>
+
+    <div class="section-title">Fielding & More</div>
+    <div class="card pink">🦆 Most Ducks<span></span></div>
+    <div class="card pink">⚡ Strike Rate<span></span></div>
+    <div class="card red">🧤 WK Dismissals<span></span></div>
+    <div class="card pink">🤲 Catches<span></span></div>
+
+    <div class="card gold">🏆 Updated till Match 0</div>
+  </div>
+
+
+
+<!-- Auction List -->
+<div class="section">
+  <h2>🛒 Auction Players Expensive List</h2>
+  <ul>
+    <li>Sanjay  - ₹30K - Team: RPS</li>
+    <li>Pragadeesh - ₹28k - Team: RPS</li>
+    <li>Joshua - ₹25K - Team: RPS</li>
+    <li>Rahul - ₹15.4K - Team: RPS</li>
+    <li>Madhan - ₹10.7K - Team: Zk</li>
+  </ul>
+</div>
+  <div class="header">NPL MEN'S T20 CUP FINAL SCHEDULE </div>
+  <div class="sub-header">FIXTURES</div>
+
+
+  <div class="fixtures">
+    <div class="fixture-day">
+      <h4>16th Jun</h4>
+      <div class="match"><span>RPS vs TKR</span><span>11:00 AM</span></div>
+        <h4>17th Jun</h4>
+      <div class="match"><span>JTS vs RSR</span><span>11:00 AM</span></div>
+           <h4>18th Jun</h4>
+      <div class="match"><span>ZA vs QGS</span><span>11:15 AM</span></div>
+          <h4>19th Jun</h4>
+      <div class="match"><span>TRS vs CNS</span><span>11:15 AM</span></div>
+    </div>
+
+    <div class="fixture-day">
+      <h4>20th Jun</h4>
+      <div class="match"><span>RPS vs ZA</span><span>11:00 AM</span></div>
+     <h4>21st Jun</h4>
+      <div class="match"><span>JTS vs TRS</span><span>11:00 AM</span></div>
+     <h4>22nd Jun</h4>
+      <div class="match"><span> QGS vs TKR</span><span>1:15 PM</span></div>
+     <h4>23rd Jun</h4>
+      <div class="match"><span>CNS vs RSR</span><span>1:15 PM</span></div>
+    </div>
+
+    <div class="fixture-day">
+      <h4>24th Jun</h4>
+      <div class="match"><span>RPS vs QGS</span><span>11:00 AM</span></div>
+      <h4>25th Jun</h4>
+      <div class="match"><span>JTS vs CNS	</span><span>11:00 AM</span></div>
+          <h4>26th Jun</h4>
+      <div class="match"><span>ZA vs TKR</span><span>1:15 PM</span></div>
+           <h4>27th Jun</h4>
+      <div class="match"><span>TRS vs RSR</span><span>1:15 PM</span></div>
+    </div>
+
+    <div class="fixture-day">
+      <h4>28th Jun- Semifinals</h4>
+      <div class="match"><span>Semifinal 1</span><span>11:00 AM (TU GROUND)</span></div>
+            <h4>29th Jun</h4>
+      <div class="match"><span>Semifinal 2</span><span>1:00 PM (Sts out Ground)</span></div>
+    </div>
+
+    <div class="finals">
+      <h3>30th Jun - FINALS</h3>
+      <p>Winner of SF1 vs Winner of SF2</p>
+      <strong>12:00 PM, MCC×LEO stadium</strong>
+    </div>
+  </div>
+
+
+<div class="container">
+    <h1>Captains of 8 teams </h1>
+    <div class="subheading">NIKING PREMIRE LEAUGE  2025</div>
+
+    <div class="p">
+      <div class="p-name">Sanjay – RPS</div>
+      <div class="p-name">Sai- CNS</div>
+      <div class="p-name">Anish - JTS</div>
+      <div class="p-name">Manish - RSR</div>
+      <div class="p-name">Gopi - TRS</div>
+      <div class="p-name">Cheran - QGS</div>
+      <div class="p-name">Adithya - TNR</div>
+      <div class="p-name">Avesh - Zk</div>
+      
+    </div>
+          
+          <H1>TEAMS</H1>
+</div>
+  <div class="team-grid">
+    <a href="csk.html" class="team-card csk">
+      <div class="team-logo-text">RPS</div>
+      <p>Rising Peeks</p>
+    </a>
+    <a href="dc.html" class="team-card dc">
+      <div class="team-logo-text">QGS</div>
+      <p>Quetta Gladiators</p>
+    </a>
+    <a href="gt.html" class="team-card gt">
+      <div class="team-logo-text">ZA</div>
+      <p>Zalaima Kings</p>
+    </a>
+    <a href="kkr.html" class="team-card kkr">
+      <div class="team-logo-text">TKR</div>
+      <p>Tribago Knight Riders</p>
+    </a>
+    <a href="lsg.html" class="team-card lsg">
+      <div class="team-logo-text">JTS</div>
+      <p>Jamaica tallahas</p>
+    </a>
+    <a href="mi.html" class="team-card mi">
+      <div class="team-logo-text">TRS</div>
+      <p>Treant Rockeres</p>
+    </a>
+    <a href="pbks.html" class="team-card pbks">
+      <div class="team-logo-text">CNS</div>
+      <p>Chennai Elevns</p>
+    </a>
+    <a href="rr.html" class="team-card rr">
+      <div class="team-logo-text">RSR</div>
+      <p>Rocking Sixers</p>
+    </a>
+  </div>
+</body>  
+</html>  
