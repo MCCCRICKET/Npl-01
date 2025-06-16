@@ -955,7 +955,7 @@
           <div class="scorecard-warmup">
     <div class="score-top">
       <div class="teams">RPS v TKR</div>
-      <div class="score">140-1</div>
+      <div class="score">139-1</div>
       <div class="overs">10.2</div>
       <div class="overs-text">Overs</div>
     </div>
@@ -1374,31 +1374,21 @@
     </a>
   </div>
 <script>
-  async function loadLiveData() {
+  async function updateScore() {
     try {
-      const response = await fetch("score.json?_=" + new Date().getTime()); // Avoid cache
-      const data = await response.json();
-
-      document.getElementById("match").textContent = data.match;
-      document.getElementById("score").textContent = data.score;
-      document.getElementById("overs").textContent = data.overs;
-      document.getElementById("result").textContent = data.result;
-
-      document.getElementById("players").innerHTML = `
-        <div><b>${data.batsman1}</b></div>
-        <div><b>${data.batsman2}</b></div>
-        <div><b>${data.bowler}</b></div>
-      `;
+      const res = await fetch("index.html?t=" + new Date().getTime()); // avoid caching
+      const html = await res.text();
+      document.getElementById("live-score").innerHTML = html;
     } catch (err) {
-      console.error("Error fetching JSON:", err);
+      console.error("Score update failed", err);
     }
   }
 
-  // First call
-  loadLiveData();
+  // Initial load
+  updateScore();
 
-  // Repeat every 5 sec
-  setInterval(loadLiveData, 5000);
+  // Auto refresh every 10 seconds (you can change it)
+  setInterval(updateScore, 10000);
 </script>
 </body>  
 </html>  
