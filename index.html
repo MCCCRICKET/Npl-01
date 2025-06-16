@@ -1374,21 +1374,10 @@
     </a>
   </div>
 <script>
-  async function updateScore() {
-    try {
-      const res = await fetch("index.html?t=" + new Date().getTime()); // avoid caching
-      const html = await res.text();
-      document.getElementById("live-score").innerHTML = html;
-    } catch (err) {
-      console.error("Score update failed", err);
-    }
-  }
-
-  // Initial load
-  updateScore();
-
-  // Auto refresh every 10 seconds (you can change it)
-  setInterval(updateScore, 10000);
+  // Auto refresh every 20 seconds (20000 milliseconds)
+  setTimeout(() => {
+    location.reload();
+  }, 20000); 
 </script>
 </body>  
 </html>  
