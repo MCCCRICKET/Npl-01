@@ -955,7 +955,7 @@
           <div class="scorecard-warmup">
     <div class="score-top">
       <div class="teams">RPS v TKR</div>
-      <div class="score">139-1</div>
+      <div class="score">140-1</div>
       <div class="overs">10.2</div>
       <div class="overs-text">Overs</div>
     </div>
@@ -1374,10 +1374,31 @@
     </a>
   </div>
 <script>
-  // Auto refresh every 20 seconds (20000 milliseconds)
-  setTimeout(() => {
-    location.reload();
-  }, 20000); 
+  async function loadLiveData() {
+    try {
+      const response = await fetch("score.json?_=" + new Date().getTime()); // Avoid cache
+      const data = await response.json();
+
+      document.getElementById("match").textContent = data.match;
+      document.getElementById("score").textContent = data.score;
+      document.getElementById("overs").textContent = data.overs;
+      document.getElementById("result").textContent = data.result;
+
+      document.getElementById("players").innerHTML = `
+        <div><b>${data.batsman1}</b></div>
+        <div><b>${data.batsman2}</b></div>
+        <div><b>${data.bowler}</b></div>
+      `;
+    } catch (err) {
+      console.error("Error fetching JSON:", err);
+    }
+  }
+
+  // First call
+  loadLiveData();
+
+  // Repeat every 5 sec
+  setInterval(loadLiveData, 5000);
 </script>
 </body>  
 </html>  
